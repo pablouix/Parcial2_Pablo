@@ -13,6 +13,7 @@ import androidx.compose.ui.tooling.preview.Preview
 import androidx.navigation.compose.NavHost
 import androidx.navigation.compose.composable
 import androidx.navigation.compose.rememberNavController
+import coil.compose.AsyncImage
 import dagger.hilt.android.AndroidEntryPoint
 
 import edu.ucne.consumiendoapi.ui.theme.ConsumiendoAPITheme
@@ -29,6 +30,11 @@ class MainActivity : ComponentActivity() {
                     color = MaterialTheme.colors.background
                 ) {
                     Greeting("ff")
+
+                    AsyncImage(
+                        model = "https://example.com/image.jpg",
+                        contentDescription = null
+                    )
 
                 }
             }
