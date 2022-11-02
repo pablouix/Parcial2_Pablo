@@ -3,7 +3,10 @@ package edu.ucne.consumiendoapi
 import android.os.Bundle
 import androidx.activity.ComponentActivity
 import androidx.activity.compose.setContent
+import androidx.compose.foundation.layout.Column
 import androidx.compose.foundation.layout.fillMaxSize
+import androidx.compose.foundation.layout.fillMaxWidth
+import androidx.compose.foundation.lazy.LazyColumn
 import androidx.compose.material.MaterialTheme
 import androidx.compose.material.Surface
 import androidx.compose.material.Text
@@ -29,12 +32,8 @@ class MainActivity : ComponentActivity() {
                     modifier = Modifier.fillMaxSize(),
                     color = MaterialTheme.colors.background
                 ) {
-                    Greeting("ff")
+                    Mostrar()
 
-                    AsyncImage(
-                        model = "https://example.com/image.jpg",
-                        contentDescription = null
-                    )
 
                 }
             }
@@ -45,6 +44,53 @@ class MainActivity : ComponentActivity() {
 @Composable
 fun Greeting(name: String) {
     Text(text = "Hello $name!")
+}
+
+@Composable
+fun Mostrar(){
+    
+    Column(modifier = Modifier.fillMaxWidth()) {
+        Text(text = "Lista de imagenes")
+        LazyColumn(){
+            item {
+                AsyncImage(
+                    modifier = Modifier.fillMaxSize(),
+                    model = "https://catequesisellimon.files.wordpress.com/2018/03/doc.jpg",
+                    contentDescription = null
+                )
+            }
+            item {
+                AsyncImage(
+                    modifier = Modifier.fillMaxSize(),
+                    model = "https://catequesisellimon.files.wordpress.com/2018/03/doc.jpg",
+                    contentDescription = null
+                )
+            }
+            item {
+                AsyncImage(
+                    modifier = Modifier.fillMaxSize(),
+                    model = "https://catequesisellimon.files.wordpress.com/2018/03/doc.jpg",
+                    contentDescription = null
+                )
+            }
+            item {
+                AsyncImage(
+                    modifier = Modifier.fillMaxSize(),
+                    model = "https://catequesisellimon.files.wordpress.com/2018/03/doc.jpg",
+                    contentDescription = null
+                )
+            }
+            item {
+                AsyncImage(
+                    modifier = Modifier.fillMaxSize(),
+                    model = "https://catequesisellimon.files.wordpress.com/2018/03/doc.jpg",
+                    contentDescription = null
+                )
+            }
+        }
+    }
+
+    
 }
 
 @Preview(showBackground = true)
