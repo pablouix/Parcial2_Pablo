@@ -29,7 +29,7 @@ object AppModule {
     @Singleton
     @Provides
     fun provideSagApi(moshi: Moshi): VerbosApi {
-        val BASE_URL = "https://private-a127e-verbos.apiary-mock.com/verbos"
+        val BASE_URL = "https://private-a127e-verbos.apiary-mock.com/"
 
         return Retrofit.Builder()
             .baseUrl(BASE_URL)
